@@ -38,3 +38,12 @@ Before testing or deploying the contract, ensure you have the following installe
 - **Node.js and npm**
 - **Truffle or Hardhat** (for local testing)
 - **Ganache** (for local blockchain simulation)
+
+### 2. Testing with Remix IDE
+
+1. Open [Remix IDE](https://remix.ethereum.org/).
+2. Create a new Solidity file named `OptimizedNestedMapping.sol`.
+3. Paste the provided contract code into the file.
+4. Compile the contract using Solidity compiler version `^0.8.0`.
+5. Deploy the contract and interact with the functions (`setValue`, `getValue`, `clearValues`) through the deployed instance.
+
