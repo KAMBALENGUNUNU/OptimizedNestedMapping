@@ -17,3 +17,14 @@
 
 3. **clearValues(uint256[] calldata keys)**:  
    This function allows users to delete values stored under multiple keys for their address, freeing up storage space and optimizing gas fees.
+## How It Works
+
+- **Nested Mapping**: The contract uses a nested mapping structure `mapping(address => mapping(uint256 => uint256))` to associate each user's address with a set of key-value pairs.
+
+- **Gas Optimization**:
+  - **Minimized Storage Writes**: The `clearValues` function uses the `delete` keyword to remove mappings, which is more gas-efficient than setting values to zero.
+  - **Use of `calldata`**: The function parameters use `calldata` instead of `memory` to reduce unnecessary data copying and lower gas costs.
+
+- **Security**:
+  - The contract ensures that only the caller can modify or clear their own mappings.
+  - The Solidity version `^0.8.0` is used to benefit from built-in overflow checks, reducing the risk of common vulnerabilities.
