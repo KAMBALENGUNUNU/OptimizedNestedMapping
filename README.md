@@ -28,3 +28,13 @@
 - **Security**:
   - The contract ensures that only the caller can modify or clear their own mappings.
   - The Solidity version `^0.8.0` is used to benefit from built-in overflow checks, reducing the risk of common vulnerabilities.
+
+## Setup and Usage
+
+### 1. Prerequisites
+
+Before testing or deploying the contract, ensure you have the following installed:
+
+- **Node.js and npm**
+- **Truffle or Hardhat** (for local testing)
+- **Ganache** (for local blockchain simulation)
